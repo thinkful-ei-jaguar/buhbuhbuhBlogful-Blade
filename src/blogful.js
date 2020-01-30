@@ -1,12 +1,12 @@
-require('dotenv').config()
+require('dotenv').config();
 
-const knex = require('knex')
-const ArticlesService = require('./articles-service')
+const knex = require('knex');
+const ArticlesService = require('./articles-service');
 
 const knexInstance = knex({
   client: 'pg',
   connection: process.env.DB_URL,
-})
+});
 
 // use all the ArticlesService methods!!
 ArticlesService.getAllArticles(knexInstance)
@@ -19,14 +19,14 @@ ArticlesService.getAllArticles(knexInstance)
     })
   )
   .then(newArticle => {
-    console.log(newArticle)
+    console.log(newArticle);
     return ArticlesService.updateArticle(
       knexInstance,
       newArticle.id,
       { title: 'Updated title' }
-    ).then(() => ArticlesService.getById(knexInstance, newArticle.id))
+    ).then(() => ArticlesService.getById(knexInstance, newArticle.id));
   })
   .then(article => {
-    console.log(article)
-    return ArticlesService.deleteArticle(knexInstance, article.id)
-  })
+    console.log(article);
+    return ArticlesService.deleteArticle(knexInstance, article.id);
+  });
