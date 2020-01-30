@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/drills.js",
+    "start": "node src/blogful.js",
     "test": "mocha --require/setup.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"

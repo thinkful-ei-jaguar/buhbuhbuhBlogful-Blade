@@ -80,4 +80,5 @@ function totalPricePerCategory() {
     });
 }
 
-totalPricePerCategory();
+// totalPricePerCategory();
+

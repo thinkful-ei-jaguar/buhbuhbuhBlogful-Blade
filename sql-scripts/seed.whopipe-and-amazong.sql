@@ -1,4 +1,4 @@
-BEGIN;
+BEGIN; 
 
 INSERT INTO whopipe_video_views
     (region, date_viewed, video_name)

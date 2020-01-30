@@ -8,7 +8,17 @@ const knexInstance = knex({
   connection: process.env.DB_URL
 })
 
-console.log('knex and driver installed');
+
+// ArticlesService.getAllArticles(db)
+//   .then(articles => console.log(articles))
+//   .finally(() => db.destroy())
+
+
+
+
+
+
+
 
 
 // //
